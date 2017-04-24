@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tp-3-hierarchy</title>
+
+    <!-- Libraries -->
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="http://d3js.org/d3.v4.js"></script>
+
+    <!-- Custom files -->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- your script file -->
+    <script src="js/main.js"></script>
+</head>
+
+<body class="container">
+    <h1>Technical progress 3</h1>
+    <p>Follow the instructions in the <code>README.md</code> file to turn the treemap below into a circle-pack layout.</p>
+    <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-primary">
+				<input value="gdp" type="radio" name="options" id="option1" autocomplete="off">GDP Per Capita
+			</label>
+        <label class="btn btn-primary">
+				<input value="life_expectancy" type="radio" name="options" id="option2" autocomplete="off" >Life Expectancy
+			</label>
+        <label class="btn btn-primary active">
+				<input value="fertility_rate" type="radio" name="options" id="option2" autocomplete="off" checked>Fertility Rate
+			</label>
+    </div>
+    <div id="vis"></div>
+</body>
+
+</html>
