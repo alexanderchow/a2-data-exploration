@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tp-3-hierarchy</title>
+    <title>A2-data-exploration</title>
 
     <!-- Libraries -->
     <script src="https://code.jquery.com/jquery.min.js"></script>
@@ -25,7 +25,7 @@
 <body class="container">
     <h1>United States County Census Data</h1>
     <h3>a2-data-exploration</h3>
-    <p>Follow the instructions in the <code>README.md</code> file to turn the treemap below into a circle-pack layout.</p>
+    <p>In this visualization, a chloropleth map is displayed of each US county.  The intensity of the color reflects the value of the current chosen variable:  population, median home value, and median household income.  A user is able to toggle between these three variables.  When a variable is changed, a new map is displayed, complete with a new scale customized for the given variable.  This map allows for the exploration of patterns and trends between these three variables.</p>
     <div class="btn-group" data-toggle="buttons">
         <label class="btn btn-primary">
 				<input value="mhi" type="radio" name="options" id="option1" autocomplete="off">Median Household Income
@@ -38,6 +38,31 @@
 			</label>
     </div>
     <div id="vis"></div>
+    <h3>Tool Description</h3>
+
+    <p>
+        In order to display data about a county at the county level, a chloropleth map is the most effective visual layout.  This allows a user to visually see regional, geographic, and location-based patterns, trends, or general observations.  For example, my dataset provides a variety of features for each county, and in a raw form, can be viewed in a table.  Viewing numerical values in a table with thousands of rows is not effective at displaying the data.  Naturally, the most effective way to display data which is segmented by a geographical unit is to display all of those isolated geographic units visually on a map with the data.  However, to display each geographic unit with a numerical value label with the data would be cluttered and extremely difficult to navigate or derive patterns from.  Thus, within the map, each geographic unit does show the data through text but through a graduated color scale, with a greater intensity reflecting greater value of the data.  This allows the eye to visually see general values for each geographic unit, and most importantly see trends or relationships in clusters of geographic units.  Additionally, the absolute text value of the data is still preserved by hovering over a geographic unit to produce the exact value in a label.  Overall, a chloropleth map is the most effective visual layout because my data is divided into geographic units (which can be most appropriately visualized on a map rather than a chart, table or other visualization), and because my data is numerically quantifiable through a graduated scale.
+    </p>
+
+    <p>
+        The census data that I acquired (included within the data directory) provides hundreds of variables for each county.  I selected just three simple variables in order to explore their relationships at the county level:  population, median home value, and median household income.  The question I raised and sought to explore was how do these variables relate to each other?  I would expect that median home value would see a correlation with median household income, as higher earnings allow purchase of more valuable homes.  I would also hypothesize that higher population on the county level would not show significant correlation to these two other variables, because although urban areas with high population tend to have more wealth and more developed economies, they also have a greater density of low income individuals and a higher population density.  My buttons to toggle the different variables is a controlling element to allow the user to filter and isolate a given variable.  This allows the user to effectively look at trends for each variable individually, and make comparisons as a whole.  The following control elements provide a brief summary of observations from the visualization.
+    </p>
+
+    <p>
+        <b>Population:</b>  The population control element displays the general trend that coastal regions are better developed with higher populations, and inland regions are less developed with lower populations.  Additionally, the Northeast and Midwest United States have well developed populations despite being inland and non-coastal.  The American Heartland has a very low population with many very lowly populated counties with some rare urban counties sprinkled in between.  The areas of highest density which are darkest blue are areas with major metropolitan cities.
+    </p>
+
+    <p>
+        <b>Median Home Value:</b>  The median home value control element displays the general trend that home values are greater in west coast states, several inland areas (noticeably Colorado), the Northeast United States, as well as some areas of Florida.  Home values do tend to show a correlation with many major cities, but the maps are still very different in many ways.  This correlation is not as strong as I would have originally hypothesized.  This is especially prevalent in areas like Texas, where home values are low in counties that have higher populations.  Additionally, home values appear more regionally separated than populations, which are separated more by metropolitan areas.  For example, Washington, Oregon, and California all share high home values throughout their state, despite low populations elsewhere, while Texas has a low home value throughout its state.  This suggests that home value has many factors attached to it, such as the abundance of land in the area it is being built.
+    </p>
+
+    <p>
+        <b>Median Household Income:</b>  The median household income control element displays the gneral trend that household income is high in very urban areas, and distributed more evenly in other areas.  It is difficult to find a general pattern or trend throughout the country, as there are many rural areas and suburban areas with differing levels of income, ranging from very high to very low.  Overall, income appears to be much more evenly distributed throughout the United States than population and home value.  One noticeable comparison is that the middle Heartland of the United State, despite having a streak of very low population and very low home value, appears to have a relatively high income.  These rural areas are contrary to my previous hypothesis that there would be a strong correlation between income and home value.  
+    </p>
+
+    <p>
+        <b>Summary:</b>  Overall, these control elements provide excellent ability to compare and contrast patterns between the three variables.  One major trend I see is that there does appear to be a correlation between highly urban areas and population, home value, and income level.  However, besides these few highly urban areas, some of my preconceptions were dispelled.  Although home value and income do appear to be correlated, there are noticeable exceptions such as the Heartland as noted above.  Population tends to be more aggregated into a few areas than the other variable.  Further exploration of these variables using the chloropleth map could provide even greater insight.  Please explore further and feel free to let me know of any further interesting observations you make!
+    </p>
 </body>
 
 </html>
