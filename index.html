@@ -10,6 +10,9 @@
     <script src="https://code.jquery.com/jquery.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://d3js.org/topojson.v2.min.js"></script>
     <script src="http://d3js.org/d3.v4.js"></script>
 
     <!-- Custom files -->
@@ -20,17 +23,18 @@
 </head>
 
 <body class="container">
-    <h1>Technical progress 3</h1>
+    <h1>United States County Census Data</h1>
+    <h3>a2-data-exploration</h3>
     <p>Follow the instructions in the <code>README.md</code> file to turn the treemap below into a circle-pack layout.</p>
     <div class="btn-group" data-toggle="buttons">
         <label class="btn btn-primary">
-				<input value="gdp" type="radio" name="options" id="option1" autocomplete="off">GDP Per Capita
+				<input value="mhi" type="radio" name="options" id="option1" autocomplete="off">Median Household Income
 			</label>
         <label class="btn btn-primary">
-				<input value="life_expectancy" type="radio" name="options" id="option2" autocomplete="off" >Life Expectancy
+				<input value="mhv" type="radio" name="options" id="option2" autocomplete="off" >Median Home Value
 			</label>
         <label class="btn btn-primary active">
-				<input value="fertility_rate" type="radio" name="options" id="option2" autocomplete="off" checked>Fertility Rate
+				<input value="population" type="radio" name="options" id="option2" autocomplete="off" checked>Total Population
 			</label>
     </div>
     <div id="vis"></div>
